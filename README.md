@@ -1,30 +1,50 @@
 # README - Middle Earth Army API
-Descriere
-Această aplicație oferă un API simplu pentru gestionarea batalioanelor și creaturilor din Middle Earth.
 
-Pas cu pas - Ordinea operațiilor recomandate
+## Description
+This application provides a simple API for managing battalions and creatures in Middle Earth.
 
-Creare batalion > Afisare Toate Batalioanele pentru a lua indexul > Adaugare Creatura la batalion > Afiseaza Toate Creaturile (Optional) > Afiseaza Creaturi si Batalioane (Optional)
+## Step by Step - Recommended Order of Operations
 
--Creare Batalion
-Endpoint: POST /army/createBattalion?type={type}
-Exemplu: POST http://localhost:8080/army/createBattalion?type=elf
-Descriere: Creează un batalion nou de tip specificat (elf, gnome, ent).
+1. Create Battalion
+2. Display All Battalions to get the index
+3. Add Creature to Battalion
+4. Display All Creatures (Optional)
+5. Display Creatures and Battalions (Optional)
 
--Adăugare creatură la batalion
-Endpoint: POST /army/addCreatureToBattalion?battalionIndex={index}&type={type}&name={name}&health={health}&attackPower={attackPower}
-Exemplu: POST http://localhost:8080/army/addCreatureToBattalion?battalionIndex=0&type=elf&name=Legolas&health=100&attackPower=80
+## Endpoints
 
+### Create Battalion
+- **Endpoint**: `POST /army/createBattalion?type={type}`
+- **Example**: 
+  ```
+  POST http://localhost:8080/army/createBattalion?type=elf
+  ```
+- **Description**: Creates a new battalion of the specified type (elf, gnome, ent).
 
--Afișare toate batalioanele și creaturile din ele
-Endpoint: GET /army/showAllBattalionsAndCreatures
-Exemplu: GET http://localhost:8080/army/showAllBattalionsAndCreatures
+### Add Creature to Battalion
+- **Endpoint**: `POST /army/addCreatureToBattalion?battalionIndex={index}&type={type}&name={name}&health={health}&attackPower={attackPower}`
+- **Example**: 
+  ```
+  POST http://localhost:8080/army/addCreatureToBattalion?battalionIndex=0&type=elf&name=Legolas&health=100&attackPower=80
+  ```
 
+### Display All Battalions and Creatures
+- **Endpoint**: `GET /army/showAllBattalionsAndCreatures`
+- **Example**: 
+  ```
+  GET http://localhost:8080/army/showAllBattalionsAndCreatures
+  ```
 
--Afișare toate batalioanele
-Endpoint: GET /army/showAllBattalions
-Exemplu: GET http://localhost:8080/army/showAllBattalions
+### Display All Battalions
+- **Endpoint**: `GET /army/showAllBattalions`
+- **Example**: 
+  ```
+  GET http://localhost:8080/army/showAllBattalions
+  ```
 
--Afișare toate creaturile din armată
-Endpoint: GET /army/showAllCreatures
-Exemplu: GET http://localhost:8080/army/showAllCreatures
+### Display All Creatures
+- **Endpoint**: `GET /army/showAllCreatures`
+- **Example**: 
+  ```
+  GET http://localhost:8080/army/showAllCreatures
+  ```
